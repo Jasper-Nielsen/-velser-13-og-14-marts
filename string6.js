@@ -1,10 +1,9 @@
 "use strict";
 
-const firstName = "jasPER"
+const name = "jasPER";
 
-const firstTwoLetters = firstName.substring(0,2).toLowerCase();
-const capitalThirdLetter = firstName.toUpperCase().substring(2, 3);
-const lastLetters = firstName.substring(3).toLowerCase();
-
-console.log(`${firstTwoLetters}${capitalThirdLetter}${lastLetters}`);
-
+const firstTwoLetters = name.substring(0, 2).toLowerCase();
+const capitalThirdLetter = name.toUpperCase().substring(2, 3); //kan skrive charAt() eller at() eller [2]
+const lastLetters = name.substring(3).toLowerCase();
+const output = `${firstTwoLetters}${capitalThirdLetter}${lastLetters}`;
+console.log(output);
