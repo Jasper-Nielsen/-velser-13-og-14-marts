@@ -71,9 +71,7 @@ function getFullNameAndCapitalizeFirstLettersInEachName(
   firstName,
   middleName
 ) {
-  // sets the order of our local variables - parameters passed by values
-  // to get firstName middleName lastName in our output in the console.log()
-  let fullName = `${firstName} ${middleName} ${lastName}`;
+  let fullName;
 
   if (middleName) {
     //makes first letter in every variable capatilized
@@ -81,12 +79,15 @@ function getFullNameAndCapitalizeFirstLettersInEachName(
     firstName = capitalized(firstName);
     middleName = capitalized(middleName);
 
+    // sets the order of our local variables - parameters passed by values
+    // to get firstName middleName lastName in our output in the console.log()
     fullName = `${firstName} ${middleName} ${lastName}`;
   } else {
     //makes first letter in every word capatilized
     lastName = capitalized(lastName);
     firstName = capitalized(firstName);
-
+    // sets the order of our local variables - parameters passed by values
+    // to get firstName lastName in our output in the console.log()
     fullName = `${firstName} ${lastName}`;
   }
   return fullName;
