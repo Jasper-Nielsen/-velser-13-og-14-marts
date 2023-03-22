@@ -108,25 +108,26 @@ function writeNameParts(fullName) {
 
 function getFullNameAndCapitalizeFirstLettersInEachName(fullName) {
   //udklipper fornavn til en streng til variablen firstName
-  let firstName = fullName.substring(0, fullName.indexOf(" "));
-  firstName = capitalized(firstName);
+  const firstName = capitalized(fullName.substring(0, fullName.indexOf(" ")));
+  // firstName = capitalized(firstName);
   // tager først og sidste mellemrum og assigner strengen til variablen  middlename
 
-  let middleName = fullName.substring(
-    fullName.indexOf(" ") + 1,
-    fullName.lastIndexOf(" ")
+  const middleName = capitalized(
+    fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "))
   );
 
-  middleName = capitalized(middleName);
+  // middleName = capitalized(middleName);
   //udklipper fornavn til en streng til varibalen lastName
 
-  let lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
-  lastName = capitalized(lastName);
+  const lastName = capitalized(
+    fullName.substring(fullName.lastIndexOf(" ") + 1)
+  );
+  // lastName = capitalized(lastName);
 
   if (middleName === " ") {
-    fullName = `${firstName} ${lastName}`;
+    fullName = { firstName, lastName };
   } else {
-    fullName = `${firstName} ${middleName} ${lastName}`;
+    fullName = { firstName, middleName, lastName };
   }
 
   return fullName;
